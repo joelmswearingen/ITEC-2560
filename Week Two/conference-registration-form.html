@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Conference Registration Form</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Cinzel|Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="conference-styles.css">
+
+</head> 
+  <body> 
+    <h1>The Super Awesome Conference Registration Form</h1>
+    <p id="instructions">
+      To register for The Super Awesome Conference, please complete all required fields and submit
+      prior to the Super Secret Deadline, which you will just know if you are Super Awesome.
+    </p>
+
+    <form>
+      <fieldset>
+        <legend>Please create a User Name and Password</legend>
+
+        <p>
+          <label for="name">(Required) Name:</label>
+          <input name="user_name" id="name" type="text" maxlength="70" required>
+        </p>
+
+        <p>
+          <label for="password">(Required) Password:</label>
+          <input name="password" id="password" type="password" required>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Please complete the remainder of the form</legend>
+
+        <p>
+          <label for="email">(Required) Email:</label>
+          <input name="email" id="email" type="email" required> 
+        </p>
+
+        <p>
+          <label for="t-shirt_size">(Required) Please select a T-shirt size:</label>
+            <select name="shirt_size" id="t-shirt_size" required>
+                <option disabled selected hidden></option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+                <option>X-Large</option>
+            </select>
+        </p>
+
+        <p>
+          <label for="date_of_birth">(Required) Date of Birth:</label>
+          <input name="DOB" id="date_of_birth" type="date" required>
+        </p>
+
+        <p>
+          (Required) Would you like to receive emails from Super Awesome Sponsors?
+          <input id="email_opt_in" name="sponsor_opt_in" type="radio" checked>
+          <label for="email_opt_in">Yes</label>
+
+          <input id="email_opt_out" name="sponsor_opt_in" type="radio">
+          <label for="email_opt_out">No</label>
+        </p>
+
+        <p>  <!-- I read that you have to use jQuery to make at least one checkbox required in HTML5... 
+        not really sure what that is or how to execute it!-->
+          (Required) Please indicate which Super Awesome conference session you will be attending -
+          Morning, Afternoon, or Both:
+          </br><input name="session" id="morning" type="checkbox" value="m" checked>
+          <label for="morning">Morning</label>
+
+          <input name="session" id="afternoon" type="checkbox" value="a">
+          <label for="afternoon">Afternoon</label>
+        </p>
+
+        <p>
+          (Optional) Please let us know if you have Super Awesome Accomodations:
+        </br><textarea name="accomodations" cols="70" rows="7"></textarea>
+        </p>  
+
+        <p>
+          <input type="submit">
+        </p>
+      </fieldset>
+    </form>
+</body>
+</html>

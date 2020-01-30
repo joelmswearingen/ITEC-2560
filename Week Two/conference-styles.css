@@ -1,0 +1,27 @@
+fieldset {
+    width: 500px;
+    margin: 10px;
+}
+
+legend {
+    color: rgb(51, 77, 0);
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+}
+
+#instructions {
+    color: rgb(51, 77, 0);
+}
+body {
+    background-image: linear-gradient(to right, #ffffff, #ddff99);
+}
+
+h1 {
+    color: rgb(34, 51, 0);
+    font-family: 'Cinzel', serif;
+}
+
+p {
+    color: rgb(85, 128, 0);
+    font-family: 'Nunito', sans-serif;
+}

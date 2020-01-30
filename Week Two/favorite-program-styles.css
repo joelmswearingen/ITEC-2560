@@ -1,0 +1,43 @@
+#program-desc {
+    background: #EFE2BA;
+    color: #F13C20;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: center;
+    text-indent: 0px;
+}
+
+.jumbotron {
+    background: #C5CBE3;
+    color: #4056A1;
+    font-family: 'Fauna One', serif;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.feedback-image {
+    max-height: 100%;
+    height: auto;
+}
+
+pre {
+    border: 2px dashed;
+}
+
+body {
+    background: #EFE2BA;
+}
+
+h1 {
+    font-size: 72px;
+    padding: 12px;
+}
+
+p {
+    font-family: 'Alegreya Sans', sans-serif;
+    background: #D79922;
+    text-indent: 24px;
+    padding: 2px;
+}

@@ -1,0 +1,27 @@
+#instructions {
+    color: rgb(56, 74, 75);
+    font-family: 'Cantarell', sans-serif;
+    font-style: oblique;
+}
+
+.jumbotron {
+    background-image: url("Jumbotron_Backround.jpg");
+    color: rgb(79, 100, 46);
+    font-family: 'acme', sans-serif;
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(to top left, #f8e965 0%, #fbf4de 75%);
+}
+
+h1 {
+    font-size: 48px;
+    background: rgb(232, 161, 150);
+    padding: 12px;
+}
+
+p {
+    color: rgb(56, 74, 75);
+    font-family: 'Cantarell', sans-serif;
+}

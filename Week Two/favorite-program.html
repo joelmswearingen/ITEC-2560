@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>My Favorite Program</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Fauna+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="favorite-program-styles.css">
+
+</head>
+
+<body class="m-4">
+
+    <div class="jumbotron">
+        <h1>The Feedback Collector</h1>
+    </div>
+
+    <div>
+        <p id="program-desc">This is one of the first programs I wrote. The program allows a user to enter multiple positive feedback
+            phrases in one pass, separated by exclamation points, and will return numbered list of those phrases with common errors corrected.
+            The program applies a capital letter to each word before putting into a numbered list.
+            Finally, the program validates that a null value has not been entered and that at least one exclamation point has been entered.
+            The user has a restart option if they wish to add more phrases.</p>
+    </div>
+
+    <div>
+        <p>Here is sample code which validates the user input before returning the numbered phrase list:</p>
+        <pre><code>
+        def phrase_validation():
+            valid_phrase = input('Enter as many phrases as you\'d like in a single line, then hit ENTER. '
+                                 'You don\'t have to use capitalization. ')  # user enters input here
+        while '!' not in valid_phrase or valid_phrase is None:  # validation loop. Blanks or missing '!' are not valid
+            valid_phrase = input('I\'m not sure I understand. Please enter at least one phrase ending in a \'!\': ')
+        valid_phrase_list = []  # empty list to capture phrases
+        for phrase in valid_phrase.split('!'):  # split string at '!' (this removed the '!' - see processing for '!' add
+            if phrase:
+                valid_phrase_list.append(phrase.lower().strip().replace('  ', ' '))  # corrects simple user entry errors
+        return valid_phrase_list
+        </code></pre>
+    </div>
+
+    <div>
+        <p>Here is what the code looks like in action!</p>
+        <img class="feedback-image" src="Feedback Program Screenshot.jpeg" alt="feedback program in action" height="250">
+    </div>
+</body>
+</html>

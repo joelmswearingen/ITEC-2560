@@ -1,0 +1,73 @@
+p {
+  font-family: "Gibson", sans-serif;
+  color: dimgray;
+  }
+h1 {
+  font-style: italic;
+  font-variant: small-caps;
+  font-size: 30px;
+  color: dimgray;
+  text-align: center;
+  }
+body {
+    background-color: linen;
+  }
+#page-title {
+  font-family: "Adriane Text", serif;
+  font-style: italic;
+  font-variant: small-caps;
+  font-size: 48px;
+  color: peru;
+  text-shadow: 1px 1px dimgray;
+  text-align: center;
+}
+#favorite-movie-title {
+  font-style: italic;
+  color: goldenrod;
+}
+#favorite-music-name {
+  font-weight: bold;
+  color: goldenrod;
+}
+#most-favorite-food {
+  font-style: italic;
+  font-weight: bold;
+  color: goldenrod;
+}
+.favorite-image {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+.favorite-section {
+  border: 2px;
+  margin: 10px;
+  padding: 8px;
+}
+.section-header {
+  font-family: "Adriane Text", serif;
+  font-style: italic;
+  margin-left: 20px;
+  color: limegreen;
+  text-shadow: 1px 1px dimgray;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+table, th, td {
+  border: 1px solid dimgray;
+  padding: 5px;
+}
+th {
+  font-family: "Gibson", sans-serif;
+  color: goldenrod;
+  height: 25px;
+}
+td {
+  font-family: "Gibson", sans-serif;
+  color: dimgray;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
