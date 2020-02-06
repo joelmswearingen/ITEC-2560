@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>List Builder</title>
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+
+        <p>Enter some text to add to the list</p>  <!-- User instructions -->
+        <input type="text" id="new-list-item">  <!-- input box -->
+        <button id="add-item">Add</button>  <!-- Add button -->
+        </br>
+        <button id="clear-list">Clear</button>  <!-- Clear list button -->
+        <ul id="list"></ul>  <!-- Unordered List to be populated with user inputs -->
+
+        <script>
+
+            let listCount = 0
+
+            let inputEl = document.querySelector('#new-list-item')
+            let addButtonEl = document.querySelector('#add-item')
+            let listEl = document.querySelector('#list')
+            let clearButtonEl = document.querySelector('#clear-list')
+
+            clearButtonEl.addEventListener('click', function () {
+                listEl.innerHTML = ''
+                listCount = 0
+            })
+
+            document.addEventListener('keyup', function() {
+                if (event.keyCode === 13) {  // enter key has keyCode 13
+                    addItem() // call addItem function
+                }
+            })
+                
+            addButtonEl.addEventListener('click', function() {
+                addItem() // call addItem function
+            })
+
+            /* 
+            addItem can be called by two different events, keyup and click
+            which is why the function is broken out
+            */
+            function addItem() {
+                if (inputEl.value.length == 0) {  // no blank entries
+                    alert('Field cannot be left blank.')
+                    return
+                }
+
+                else if (inputEl.value.length > 50) {  // no entries longer than 50 characters
+                    alert('Field cannot exceed 50 characters.')
+                    return
+                }
+                
+                else if (listCount < 10) {  // add list item if under 10 items
+                    let userInput = inputEl.value  // read value from input  
+                    let newLiEl = document.createElement('li');  // make a new list element
+                    newLiEl.innerHTML = userInput  // set inew li to value
+                    listEl.appendChild(newLiEl)  // appends list item to end of list
+                    inputEl.value = ''  // return input field to blank
+                    listCount = listCount + 1  // increase list count by one
+                } 
+                
+                else {  // inform user to clear list for more entires
+                    alert('This list cannot exceed 10 items. \
+Please clear the list before adding more items.')
+                }
+            }
+        </script>
+    </body>
+</html>
+
+    

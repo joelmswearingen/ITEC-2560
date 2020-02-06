@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Click the Button!</title>
+</head>
+<body>
+
+    <button>Can You Click This Button?</button>
+
+    <button id="second-button">Click this button too!</button>
+
+<script>
+    // this finds the button element on the page. 
+    //querySelector will find the first element
+    let button = document.querySelector('button')
+
+    //Add and event listener for 'click' events, then the fucntion is run when the listener detects the event.
+    button.addEventListener('click',function(){
+        alert('You\'re a good button clicker!')
+        button.innerHTML = 'The button was clicked!'
+    })
+
+    let secondButton = document.querySelector('#second-button')
+    
+    secondButton.addEventListener('click',function(){
+        alert('You did it again! Rockstar!')
+    })
+
+</script>
+
+</body>
+</html>
