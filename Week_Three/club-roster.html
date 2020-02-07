@@ -50,7 +50,7 @@
         <button id="remove-selected-students">Remove selected students</button>
 
     <script>
-
+        // defined elements
         let nameEl = document.querySelector('#student-name')
         let idEl = document.querySelector('#student-id')
         let gpaEl = document.querySelector('#student-gpa')
@@ -59,8 +59,11 @@
         let studentCount = document.querySelector('#student-count')
         let removeButtonEl = document.querySelector('#remove-selected-students')
 
+        // set initial count to 0
         studentCount.innerHTML = 0
 
+        // rather than trying to keep a tally of items added and removed
+        // call a function to find the student list and count the list items.
         function updateCount() {
             var count = listEl.childElementCount;
             studentCount.innerHTML = count;
@@ -69,30 +72,31 @@
         addButtonEl.addEventListener('click', function() {
 
             if (nameEl.value == '') {
-                alert('Student Name is Required')
+                alert('Student Name is Required')  // error if name is blank
             }
 
-            else if (idEl.value == '') {
+            else if (idEl.value == '') {  // error if id is blank
                 alert('Student ID is Required')
             }
 
-            else if (gpaEl.value == '' || gpaEl.value >4 || gpaEl.valde < 0) {
+            else if (gpaEl.value == '' || gpaEl.value >4 || gpaEl.valde < 0) {  // error if gpa is blank or >4 or <0
                 alert('GPA between 0 and 4 is Required')
             }
 
-            else {
+            else {  // otherwise create and add the list item
 
                 let newLiEl = document.createElement('li')  // create li element
                 newLiEl.innerHTML = nameEl.value + ', ID: ' + idEl.value + ', GPA: ' + gpaEl.value  // strings 3 user input fields together
                 newLiEl.addEventListener('click', toggle);  // add click event listener to each li element and calls toggle function
-                listEl.appendChild(newLiEl)  // appends 
+                listEl.appendChild(newLiEl)  // appends to list
                 nameEl.value = ''  // clear student name field
                 idEl.value = ''  // clear student id field
                 gpaEl.value = ''  // clear student gpa field
-                updateCount();
+                updateCount();  // run update count of list
             }    
         })
 
+        // fuction to toggle the class of selected to and from li's when they are clicked
         function toggle() {
             this.classList.toggle('selected');
         }    
@@ -108,33 +112,6 @@
                 updateCount();  // run update count of list
             }
         })
-
-        
-
-
-        /* Add the following functionality to this page
-
-        When the page loads
-            - Using JavaScript, display 0 in span#student-count
-
-        When button#add-students is clicked
-            - Read the value from the student-name input
-            - Read the value from the student-id input
-            - Read the value from the student-gpa input
-            - Create a new li element
-            - Set the new li element innerHTML to a string containing the student's name, id, and GPA
-                - for example "Beyonce Knowles, id: aa1234bb, GPA: 3.8"
-                - Use a template string  
-            - Add a click event handler to each li element. 
-                When a li element is clicked, add the class="selected" to that li element.
-                When a li element is clicked again, remove the class="selected" from that li element
-            - Add the new li element to ul#student-list element 
-            - Update the span#student-count value to the new number of students
-
-        When button#remove-selected-students is clicked, 
-            - remove all of the elements with the class="selected" from the list. 
-            
-        */
 
     </script>
 
