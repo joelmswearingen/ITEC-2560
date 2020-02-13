@@ -18,18 +18,17 @@ let iss_location = {
 };
 
 // TODO Extract the latitude value, and log it to the console.
-console.log('The latitude of the International Space Station at 1pm on January 12th 2018 was ' + iss_location.iss_position.latitude)
+// object.key.nestedKey
+console.log('The latitude of the International Space Station at 1pm on January 12th 2018 was ' + iss_location.iss_position.latitude);
 // TODO Extract the longitude value, and log it to the console.
-console.log(`The longitude of the International Space Station at 1pm on January 12th 2018 was ${iss_location.iss_position.longitude}`)
-
-
+// object.key.nestedKey
+console.log(`The longitude of the International Space Station at 1pm on January 12th 2018 was ${iss_location.iss_position.longitude}`);
 
 
 /* b. Use this JavaScript object of exchange rates relative to Euros.
 The properties are currency symbols, the values are the exchange rates.
 Data source: http://fixer.io/
 * */
-
 
 let rates = {
     "AUD": 1.5417,
@@ -46,14 +45,16 @@ rates.CHF = 1.1787 // use 'console.log(rates)' to validate "CHF" rate of 1.1787 
 //      the equivalent value in Australian Dollars (AUD)
 let exchangeRate = rates.AUD  // extract the exchange rate for AUD
 
-console.log('The value of 100 Euros in Australian Dollars is ' + Math.round(100/exchangeRate) + ' AUD.')
-// to find orig currency worth after exchange divide orig currency amount by exchange rate. Round value to nearest whole int.
+console.log('The value of 100 Euros in Australian Dollars is ' + Math.round(100/exchangeRate) + ' AUD.');
+// probably best for the equation to not be defined in the output, but... there it is
+// equation: to find orig currency worth after exchange divide orig currency amount by exchange rate. Round value to nearest whole int.
 
 // TODO write code to identify the currency symbol that has the highest exchange rate compared to Euros.
 //    In other words, identify the property with the largest value. the answer is BRL (Brazilian Real) at 3.8959 BRL to 1 Euro.
+let exchangeRates = Object.values(rates)  // extract values from the object into an array
 
-console.log(Math.max(rates))
-
+console.log(Math.max(...exchangeRates));  // use Math.max() to select highest number in array
+// I know this is only yielding the max value of all the keys and the not the key itself. Not sure how to call the key itself.
 
 /* c. Use this JavaScript array of objects of cat owners, and their cats. Source, moderncat.com
  */
@@ -66,15 +67,15 @@ let cats_and_owners = [
 ];
 
 // TODO print Gary Oldman's cat's name
-console.log(`Gary Oldman's cat is named ${cats_and_owners[1].cat}`)
+console.log(`Gary Oldman's cat is named ${cats_and_owners[1].cat}`);  // identify the index number of the array, and return the values for cat
 
 // TODO Taylor Swift's cat is called 'Meredith'. Write code to add this data to the array.
-cats_and_owners.push( { name: "Taylor Swift", cat: "Meredith" } )  // use 'console.log(cats_and_owners)' to validate TSwift object was added to array
+cats_and_owners.push( { name: "Taylor Swift", cat: "Meredith" } );  // use 'console.log(cats_and_owners)' to validate TSwift object was added to array
 
 // TODO write a loop to print each cat owner, and their cat's name, one per line. Use the forEach style.
 cats_and_owners.forEach( function(cats_and_owners) {  // For each object in the cats_and_owners array, print string to console log
     console.log(`${cats_and_owners.name}'s cat's name is ${cats_and_owners.cat}`)
-})
+});
 
 
 
@@ -211,12 +212,46 @@ let nobel_prize_winners_2017 = {
 };
 
 // TODO print the full name of the Literature Nobel laureate.
-console.log('The Nobel Prize Laureate for Literature in 2017 was ' + nobel_prize_winners_2017.prizes[3].laureates[0].firstname + ' ' + nobel_prize_winners_2017.prizes[3].laureates[0].surname)
+console.log('The Nobel Prize Laureate for Literature in 2017 was ' + nobel_prize_winners_2017.prizes[3].laureates[0].firstname + ' ' + nobel_prize_winners_2017.prizes[3].laureates[0].surname);
 
 // TODO print the ids of each of the Physics Nobel laureates. Your code should still work without modification if a laureate was added, or removed.
-
+nobel_prize_winners_2017.prizes[0].laureates.forEach( function(laureates) {  // loop prize indexed at 0 to find id for each laureate
+    console.log(laureates.id)
+});
 
 // TODO write code to print the names of all of the prize categories (So your output would start physics, chemistry, medicine... ).
+// also a contender for list instead of using a join
+// nobel_prize_winners_2017.prizes.forEach( function(prizes) {
+//     console.log(prizes.category)
+// })
+
+let prizeCategory = []  // establish array
+
+nobel_prize_winners_2017.prizes.forEach( function(prizes) {  // loop each prize to find category value
+    prizeCategory.push(prizes.category)  // push each value to array
+})
+
+let allPrizeCat = prizeCategory.join(', ')  // join values together in string
+console.log(allPrizeCat);  // print
+
+
 // TODO write code to print the total number of prize categories
+let categoryNum = []  // establish array
+
+nobel_prize_winners_2017.prizes.forEach( function(prizes) {  // loop each prize to find catagory value
+    categoryNum.push(prizes.category)  // push value to array 
+})
+
+console.log(categoryNum.length)  // count values in array
+
 // TODO write code to count the total number of laureates from 2017. 
 //   have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.
+let laureateNum = []  // extablish array
+
+nobel_prize_winners_2017.prizes.forEach( function(prizes) {  // loop each prize 
+    prizes.laureates.forEach( function(laureates) {  // loop each laureate in each prize
+        laureateNum.push(laureates.id)  // push unique value of each laurate  to array
+    }) 
+})
+
+console.log(laureateNum.length);  // count values in array
