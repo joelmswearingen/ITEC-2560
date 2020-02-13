@@ -63,10 +63,10 @@
     let homeownerHouseNumberInput = document.querySelector('#homeowner-house-number')
     let homeownerStreetNameInput = document.querySelector('#homeowner-street-name')
     let treeTypeSelect = document.querySelector('#tree-type')
-
     // TODO create a variable for city input element
     let cityInput = document.querySelector('#city')
     // TODO create a variable for zip code input element
+    let zipcodeInput = document.querySelector('#zipcode')
     
     let submitButton = document.querySelector('#submit-order')
 
@@ -78,39 +78,63 @@
         let houseNumber = homeownerHouseNumberInput.value
         let streetName = homeownerStreetNameInput.value
         let treeType = treeTypeSelect.value
-
         // TODO get the value from the input#city
         let city = cityInput.value
         // TODO get the value from the input#zipcode
+        let zipcode = zipcodeInput.value
 
         // TODO Validate that all six input and select elements have been completed
-
         // TODO Validate the zipcode is in the range 55001 and 56763 (which checks that the zip code is in Minnesota)
 
         let errors = []
         
         // If a form element has not been completed, add an error message to the errors array (use push)
-        if (name.trim().length == 0) { // eliminates white space
-            errors.push('please enter a name')
+        if (name.trim().length == 0) { // eliminates white space, cannot be left blank
+            errors.push('Homeowner Name cannot be left blank')
+        }
+
+        if (houseNumber.trim().length == 0) {  // eliminates white space, does not validate int as house number may include alpha characters
+            errors.push('House Number cannot be left blank')
+        }
+
+        if (streetName.trim().length == 0) {  // eliminates white space, cannot be left blank
+            errors.push('Street Name cannot be left blank')
+        }
+
+        if (city.trim().length == 0) {
+            errors.push('City cannot be left blank')
+        }
+
+        if (zipcode.trim().length == 0 || zipcode.trim() <= 55001 || zipcode.trim() >= 56763) {
+            errors.push('Zip Code must be a valid Minnesota zip code')
+        }
+
+        if (treeType == "") {
+            errors.push('Please select a tree type')
         }
 
         if (errors.length == 0) {
             // no errors display order summary
+            orderSummaryParagraph.innerHTML = 'Thank you for you order, ' + name + '! </br>Tree type "' + treeType + '" has been ordered. </br>Your tree will be delivered to ' + houseNumber + ' ' + streetName + ', ' + city + ', MN ' + zipcode + '.'
+            homeownerNameInput.value = ''
+            homeownerHouseNumberInput.value = ''
+            homeownerStreetNameInput.value = ''
+            treeTypeSelect.value = ''
+            cityInput.value = ''
+            zipcodeInput.value = ''
         }
         else {
-            
+            let errorMsg = errors.join('\n')
+            alert(errorMsg)
+            return
         }
         // TODO - If there are any errors after checking all of the elements, 
         // display an alert with all of the error messages (use join)
         // and then return from this function to prevent further processing 
 
-
         // TODO - If there are no errors, use a template string to display an order summary in the order summary paragraph
-
-        
+  
     })
-
-
 
 </script>
 
