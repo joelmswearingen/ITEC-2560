@@ -90,31 +90,30 @@
         
         // If a form element has not been completed, add an error message to the errors array (use push)
         if (name.trim().length == 0) { // eliminates white space, cannot be left blank
-            errors.push('Homeowner Name cannot be left blank')
+            errors.push('Homeowner Name cannot be left blank')  // push statement to error array
         }
 
         if (houseNumber.trim().length == 0) {  // eliminates white space, does not validate int as house number may include alpha characters
-            errors.push('House Number cannot be left blank')
+            errors.push('House Number cannot be left blank')  // push statement to error array
         }
 
         if (streetName.trim().length == 0) {  // eliminates white space, cannot be left blank
-            errors.push('Street Name cannot be left blank')
+            errors.push('Street Name cannot be left blank')  // push statement to error array
         }
 
-        if (city.trim().length == 0) {
-            errors.push('City cannot be left blank')
+        if (city.trim().length == 0) {  // eliminates white space, cannot be left blank
+            errors.push('City cannot be left blank')  // push statement to error array
         }
 
-        if (zipcode.trim().length == 0 || zipcode.trim() <= 55001 || zipcode.trim() >= 56763) {
-            errors.push('Zip Code must be a valid Minnesota zip code')
+        if (zipcode.trim().length == 0 || zipcode.trim() <= 55001 || zipcode.trim() >= 56763) {  // eliminates white space, cannot be left blank, must be a number betwen 55001 and 56763
+            errors.push('Zip Code must be a valid Minnesota zip code')  // push statement to error array
         }
 
-        if (treeType == "") {
-            errors.push('Please select a tree type')
+        if (treeType == "") {  // value cannot be selected/disabled field
+            errors.push('Please select a tree type')  // push statement to error array
         }
 
-        if (errors.length == 0) {
-            // no errors display order summary
+        if (errors.length == 0) {  // if no errors, display order summary and clear values from inputs
             orderSummaryParagraph.innerHTML = 'Thank you for you order, ' + name + '! </br>Tree type "' + treeType + '" has been ordered. </br>Your tree will be delivered to ' + houseNumber + ' ' + streetName + ', ' + city + ', MN ' + zipcode + '.'
             homeownerNameInput.value = ''
             homeownerHouseNumberInput.value = ''
@@ -123,10 +122,10 @@
             cityInput.value = ''
             zipcodeInput.value = ''
         }
-        else {
+        else {  // if errors exist in array, join each statement with new line for each and display alert
             let errorMsg = errors.join('\n')
             alert(errorMsg)
-            return
+            return  // prevent further processing
         }
         // TODO - If there are any errors after checking all of the elements, 
         // display an alert with all of the error messages (use join)

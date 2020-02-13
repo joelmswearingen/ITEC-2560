@@ -31,7 +31,7 @@
 // address = nameCityState('Minneapolis', 'mn', 55408)
 // console.log(address)
 
-// 
+
 // numOfLetters()  // make sure to call the fucking function!
 // function numOfLetters() {
 //     let name = 'Swearingen'
@@ -45,11 +45,11 @@
 // if (todaysTemp < 32)
 
 
-// //Create an array
+//Create an array
 let trees = ['Fir', 'Sequoia', 'Maple']
 trees.sort()
 
-// loop over the array to print every three
+// loop over the array to print every tree
 trees.forEach( function(tree) {
     console.log(tree)
 })
