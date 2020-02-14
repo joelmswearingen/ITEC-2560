@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Canvas</title>
+
+  <style>
+
+    #canvas {
+      border: 1px black solid;
+    }
+
+  </style>
+
+</head>
+<body>
+
+<!--The canvas element. Set height and width, and give it an id -->
+<canvas id="canvas" height="800" width="800"></canvas>
+
+<script>
+
+  //Find the canvas element in this document
+  let canvas = document.querySelector("#canvas");
+  // A context object will be used to draw on the canvas
+  let context = canvas.getContext("2d");
+
+  // Draw a rectangle, filled with the default color (which is black)
+  // The arguments are (top left corner x, top left corner y, width, height)
+  context.fillRect(30, 50, 10, 100);
+  // stroke functions draw lines.
+  context.fillStyle = "red"  // html colors hex and rgb can be used as well
+  context.fillRect(30, 50, 75, 10)
+  // context.strokeStyle = "red"  // this will add red border to any Rect from this point forward 
+  // context.strokeWidth change width of the line
+  context.strokeRect(50, 50, 10, 100)
+  context.fillRect(30, 90, 75, 10)
+
+  context.beginPath()
+  context.arc(400, 400, 200, 0, 6.3)
+  context.stroke()
+  context.fill()  // fills in circle
+
+
+
+</script>
+
+</body>
+</html>
+
