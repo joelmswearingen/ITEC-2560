@@ -45,7 +45,7 @@ rates.CHF = 1.1787 // use 'console.log(rates)' to validate "CHF" rate of 1.1787 
 //      the equivalent value in Australian Dollars (AUD)
 let exchangeRate = rates.AUD  // extract the exchange rate for AUD
 
-console.log('The value of 100 Euros in Australian Dollars is ' + Math.round(100/exchangeRate) + ' AUD.');
+console.log('The value of 100 Euros in Australian Dollars is ' + Math.round(100*exchangeRate) + ' AUD.');
 // probably best for the equation to not be defined in the output, but... there it is
 // equation: to find orig currency worth after exchange divide orig currency amount by exchange rate. Round value to nearest whole int.
 
