@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mouse Events</title>
+  <title>Drawing Program feat. Mouse Events</title>
 
   <style>
 
@@ -16,12 +16,13 @@
 <body>
 
 
-<P>Drag the mouse on the canvas</P>
+<p><strong>Click and drag the mouse on the canvas to draw</strong></p> 
+
 <canvas id="canvas" height="400" width="400"></canvas>
 </br>
+<p><i>Use the selector tools below to choose your color and brush size.</i></P>
 <label for="color">Color Selector</label>
 <input id="color" type="color">  <!-- add color selector for user to choose color -->
-</br>
 <label for="size">Brush Size</label>
 <input id="size" type="range" min="1" max="10" value="2">  <!-- add range to determine size of "brush" - defaults to 2 -->
 
@@ -35,7 +36,6 @@
 
   canvas.addEventListener("mousedown", function() {
     mousedown = true
-    context.fillStyle = colorSelector
   })
 
   canvas.addEventListener("mouseup", function() {
@@ -51,16 +51,16 @@
     // get the x, y location of the event
     var x = event.offsetX
     var y = event.offsetY   //offsetX, offsetY, may not work in older browsers
-    var colorSelector = document.querySelector('#color')
-    var brushSelector = document.querySelector('#size')
+    var colorSelector = document.querySelector('#color')  // variable for user selected color 
+    var brushSelector = document.querySelector('#size')  // variable for user selected brush size
 
     //Draw a filled rectangle centered under the mouse click
     //x, y is the top left corner, so shift up and left by 5 to center it under the mouse.
     //context.fillRect(x-5, y-5, 10, 10)
     
     context.beginPath()
-    context.arc(x, y, brushSelector.value, 0, 6.3)
-    context.fillStyle = colorSelector.value
+    context.arc(x, y, brushSelector.value, 0, 6.3)  // use user selected value for brush size
+    context.fillStyle = colorSelector.value  // use user selected color  
     context.fill()
 
   })
