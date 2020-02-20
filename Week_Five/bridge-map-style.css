@@ -1,0 +1,10 @@
+h1 {
+    font-style: italic;
+}
+
+#bridge-map {
+    height: 550px;
+    width: 800px;
+    border: 2px black solid
+
+}
