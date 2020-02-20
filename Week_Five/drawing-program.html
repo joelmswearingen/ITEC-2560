@@ -59,9 +59,9 @@
     //context.fillRect(x-5, y-5, 10, 10)
     
     context.beginPath()
-    context.arc(x, y, 3, 0, 6.3)
-    context.strokeStyle = colorSelector
-    context.stroke()
+    context.arc(x, y, brushSelector.value, 0, 6.3)
+    context.fillStyle = colorSelector.value
+    context.fill()
 
   })
 
