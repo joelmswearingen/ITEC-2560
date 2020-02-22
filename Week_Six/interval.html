@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello Interval</title>
+</head>
+
+<body>
+    <h1>What time is it?</h1>
+    <p id="time"></p>
+
+    <script>
+        let timeElement = document.querySelector('#time')
+
+        timeElement.innerHTML = Date()
+
+        // setInterval(function() {
+        //     let date = Date()
+        //     timeElement.innerHTML = date
+        // }, 1000)
+
+        // This does the same thing as the function directly above. 
+        // The => after the paren replaces the 'function' before the paren
+        setInterval( () => {
+            let date = Date()
+            timeElement.innerHTML = date
+        }, 1000)
+
+
+    </script>
+
+</body>
+
+</html>
