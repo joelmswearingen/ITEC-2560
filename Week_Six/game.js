@@ -53,12 +53,12 @@ submitButton.addEventListener('click', function() {  // upon clicking the submit
                 resultTextElement.innterHTML = `You must enter a guess.`
             }
             // trim and convert user answer to lowercase, then compare to captial city extracted from api (also converted to lowercase) for non-match
-            if (userAnswer.trim().toLowerCase() != actualCapitalCity.toLowerCase()) {  
+            else if (userAnswer.trim().toLowerCase() != actualCapitalCity.toLowerCase()) {  
                 resultTextElement.innerHTML = `Incorrect. The capital city of ${randomCountryName} is not ${userAnswer}, it is ${actualCapitalCity}.`
             }
             
             // trim and convert user answer to lowercase, then compare to captial city extracted from api (also converted to lowercase) for match
-            if (userAnswer.trim().toLowerCase() == actualCapitalCity.toLowerCase()) {  
+            else (userAnswer.trim().toLowerCase() == actualCapitalCity.toLowerCase()) {  
                 resultTextElement.innerHTML = `Correct! The capital city of ${randomCountryName} is ${actualCapitalCity}.`
             }
         })
