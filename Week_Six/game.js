@@ -42,16 +42,16 @@ function update() {
 
 submitButton.addEventListener('click', function() {  // upon clicking the submit button...
     let userAnswer = userAnswerElement.value  // store the users answer
+    if (userAnswer.trim().length === 0) {  // trim user answer and validate length is not 0
+                alert ('You must enter a guess.')
+            } else {
     let url = `https://api.worldbank.org/v2/country/${countryCode}?format=json`  // set the worldbank api url with countryCode saved to array 
     fetch(url)  // call the url
         .then( response => response.json() ) //function 'response' returns 'response.json'
         .then( actualCapital => {         
             let actualCapitalCity = actualCapital[1][0]['capitalCity']  // store the capital name from the api - indentify captial by following correct index pathway
             console.log(actualCapitalCity)  // just proving that a capital is found, remove this line for game
-            // trim user answer and validate length is not 0  --  this isn't working... the next two if statements are though...
-            if (userAnswer.trim().length == 0) {  
-                resultTextElement.innterHTML = `You must enter a guess.`
-            }
+            
             // trim and convert user answer to lowercase, then compare to captial city extracted from api (also converted to lowercase) for non-match
             if (userAnswer.trim().toLowerCase() != actualCapitalCity.toLowerCase()) {  
                 resultTextElement.innerHTML = `Incorrect. The capital city of ${randomCountryName} is not ${userAnswer}, it is ${actualCapitalCity}.`
@@ -65,7 +65,7 @@ submitButton.addEventListener('click', function() {  // upon clicking the submit
         .catch( error => {  // handle the rejected promise, log to console
             console.log('error', error)
         })
-    }
+    }}
 )
 
 // upon clicking the try again button, clears all innter.HTML fields and arrays and runs the update function to retreive a new country
