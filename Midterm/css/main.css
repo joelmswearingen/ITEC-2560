@@ -1,0 +1,51 @@
+/*
+font-family: 'Gloria Hallelujah', ;
+font-family: 'Shadows Into Light Two', ;
+font-family: 'Montserrat', ;
+font-family: 'Ibarra Real Nova', ;
+*/
+
+body {
+    background: ghostwhite;
+    font-family: 'Ibarra Real Nova';
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: rgb(251, 124, 120);
+    font-family: 'Shadows Into Light Two';
+    color: rgb(8, 17, 65);    
+    padding: 20px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+section {
+    background: rgb(8, 17, 65);
+    color: ghostwhite;
+    padding: 20px;
+}
+
+footer {
+    background: rgb(6, 176, 163);
+    font-family: 'Shadows Into Light Two';
+    color: rgb(8, 17, 65);
+    padding: 10px 20px;
+}
+
+#logo {
+    font-family: 'Gloria Hallelujah';
+    font-size: larger;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
