@@ -3,10 +3,12 @@ font-family: 'Gloria Hallelujah', ;
 font-family: 'Shadows Into Light Two', ;
 font-family: 'Montserrat', ;
 font-family: 'Ibarra Real Nova', ;
+
+rgb(251, 124, 120)
 */
 
 body {
-    background: ghostwhite;
+    background: rgb(8, 17, 65);
     font-family: 'Ibarra Real Nova';
     margin: 0;
     padding: 0;
@@ -33,7 +35,15 @@ li {
 section {
     background: rgb(8, 17, 65);
     color: ghostwhite;
-    padding: 20px;
+}
+
+div [class^='col-'] {
+    padding: 0;
+}
+img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%)
 }
 
 footer {
@@ -49,3 +59,5 @@ footer {
     text-transform: uppercase;
     font-weight: bolder;
 }
+
+
