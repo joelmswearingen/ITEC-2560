@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Ibarra+Real+Nova|Montserrat|Shadows+Into+Light+Two&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
 
@@ -16,48 +16,69 @@
 
 <body>
 
-    <header>
+    <header class="navbar" id="header">
         <nav>
             <ul>
+                <li class="cir-hov">About</li>
+                <li class="cir-hov">Demo</li>
                 <li id="logo">The Nerdy Theatre</li>
-                <li>About</li>
-                <li>Demo</li>
-                <li>Support</li>
-                <li>Login</li>
-            </ul>
+                <li class="cir-hov">Support</li>
+                <li class="cir-hov">Login</li>
+            </ul>        
         </nav>
     </header>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6">
-                <section>
-                    <img src="../images/jack-young-4_SiciNWLYg-unsplash.jpg" alt="to house">
-                </section>        
-            </div>
+    <figure id="first-row">
+        <img id="lead-image" src="../images/jack-young-4_SiciNWLYg-unsplash.jpg" alt="illuminated 'to house' with arrow sign on concrete wall backstage">
+        <figcaption class="credit">Photo by <a href="https://unsplash.com/@jackyoung?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Jack Young</a> on <a href="https://unsplash.com/@jackyoung?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a></figcaption>  
+    </figure>
 
-            <div class="col-lg-6">
-                <section>This section will contain a colorblock</section>        
-            </div>
-        </div>
-    </div>
+    <section class="features"> 
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-6">
-                <section>This section will contain a colorblock</section>        
-            </div>
+        <figure>
+            <img src="../images/001-stage.png" alt="proscenium stage with grand curtain and seats icon"> 
+            <figcaption>Manage your events</figcaption>
+        </figure>
 
-            <div class="col-lg-6">
-                <section>
-                    <img src="../images/alex-avalos-dnUNjIUCg5c-unsplash.jpg" alt="empty seats">
-                </section>        
-            </div>
-        </div>
-    </div>
+        <figure>
+            <img src="../images/003-group.png" alt="three persons grouped icon"> 
+            <figcaption>Manage your employees</figcaption>
+        </figure>
 
-    <footer>The Nerdy Theatre Copyright and stuff</footer>
+        <figure>
+            <img src="../images/002-calendar.png" alt="event calendar icon"> 
+            <figcaption>Schedule your employees/events</figcaption>
+        </figure>
 
+        <figure>
+            <img src="../images/001-stage.png" alt="proscenium stage with grand curtain and seats icon"> 
+            <figcaption>Manage your events</figcaption>
+        </figure>
+
+        <figure>
+            <img src="../images/001-stage.png" alt="proscenium stage with grand curtain and seats icon"> 
+            <figcaption>Manage your events</figcaption>
+        </figure>
+
+        <figure>
+            <img src="../images/001-stage.png" alt="proscenium stage with grand curtain and seats icon"> 
+            <figcaption>Manage your events</figcaption>
+        </figure>
+
+    </section>
+
+    <p>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/prosymbols" title="Prosymbols">Prosymbols</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/pause08" title="Pause08">Pause08</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a></div>
+    </p>
+
+
+    <footer>Copyright ©2020 The Nerdy Theatre. All rights reserved.</footer>
+
+    <script src="index.js"></script>
 
 </body>
 
