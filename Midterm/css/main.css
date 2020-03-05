@@ -26,6 +26,13 @@ p {
     font-size: medium;
 }
 
+h1 {
+    font-family: 'Shadows Into Light Two';
+    text-align: center;
+    color: rgb(8, 17, 65);
+    font-size: xx-large;
+}
+
 /*  HEADER  */
 
 #header {
@@ -108,6 +115,7 @@ figure {
 
 .features {
     background: ghostwhite;
+    font-family: 'Montserrat';
     color: rgb(8, 17, 65);
     padding: 20px;
     display: flex;
@@ -117,7 +125,7 @@ figure {
 .features figure {
     margin: auto;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
     width: 150px;
 }
 
@@ -127,9 +135,9 @@ figure {
 
 .credit {
     text-align: right;
-    margin-right: 40px;
+    margin-right: 20px;
     font-family: 'Montserrat';
-    font-size: small;
+    font-size: x-small;
 }
 
 /*  FOOTER  */
