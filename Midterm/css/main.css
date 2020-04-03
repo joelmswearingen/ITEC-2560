@@ -33,10 +33,15 @@ h1 {
     font-size: xx-large;
 }
 
+.header-alt {
+    padding-top: 100px;
+}
+
+
 /*  HEADER  */
 
 #header {
-    background-color: rgba(8, 17, 65, 0.6);
+    background-color: rgba(8, 17, 65, 0.8);
     font-family: 'Shadows Into Light Two';
     font-size: larger;
     color: ghostwhite;
@@ -71,6 +76,21 @@ li {
     top: 0;
     width: 100%;
     z-index: 1000;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(8, 17, 65);
+}
+
+a:visited {
+    text-decoration: none;
+    color: rgb(188, 59, 35);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: ghostwhite;
 }
 
 .cir-hov {
@@ -142,7 +162,7 @@ figure {
 
 /*  FOOTER  */
 
-footer {
+#footer {
     background: ghostwhite;
     font-family: 'Shadows Into Light Two';
     color: rgb(8, 17, 65);

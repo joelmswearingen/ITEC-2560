@@ -1,11 +1,3 @@
-window.onscroll = function() {
-    scrollFunction()
-};
+$( "#header" ).load( "../html/navigation_bar.html" );
 
-function scrollFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("header").style.backgroundColor = "ghostwhite";
-    } else {
-        document.getElementById("header").style.backgroundColor = "transparent";
-    }
-}
+$( "#footer" ).load( "../html/footer.html" );
