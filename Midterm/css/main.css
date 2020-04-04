@@ -18,7 +18,12 @@ body {
     background: ghostwhite;
     font-family: 'Ibarra Real Nova';
     margin: 0;
+    height: 100%;
     padding: 0;
+}
+
+.content {
+    min-height: calc(100vh - 60px);
 }
 
 p {
@@ -27,16 +32,27 @@ p {
 }
 
 h1 {
-    font-family: 'Shadows Into Light Two';
+    font-family: 'Gloria Hallelujah';
     text-align: center;
     color: rgb(8, 17, 65);
     font-size: xx-large;
+    padding-bottom: 15px;
+    margin: 0;
 }
 
 .header-alt {
-    padding-top: 100px;
+    padding-top: 120px;
 }
 
+a:link {
+    text-decoration: none;
+    color: rgb(8, 17, 65);
+}
+
+a:visited {
+    text-decoration: none;
+    color: rgb(188, 59, 35);
+}
 
 /*  HEADER  */
 
@@ -47,10 +63,17 @@ h1 {
     color: ghostwhite;
     padding: 15px;
     border-bottom-style: solid;
-    border-bottom-color: rgb(237, 225, 115);
+    border-bottom-color: rgb(8, 17, 65);
     border-bottom-width: 3px;
     text-align: center;
     transition: 0.2s;
+}
+
+#logo {
+    font-family: 'Gloria Hallelujah';
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: bolder;
 }
 
 ul {
@@ -64,13 +87,6 @@ li {
     margin-right: 40px;
 }
 
-#logo {
-    font-family: 'Gloria Hallelujah';
-    font-size: 30px;
-    text-transform: uppercase;
-    font-weight: bolder;
-}
-
 .navbar {
     position: fixed;
     top: 0;
@@ -78,19 +94,13 @@ li {
     z-index: 1000;
 }
 
-a:link {
-    text-decoration: none;
-    color: rgb(8, 17, 65);
-}
-
-a:visited {
-    text-decoration: none;
-    color: rgb(188, 59, 35);
-}
-
 .navbar a {
     text-decoration: none;
     color: ghostwhite;
+}
+
+.navbar #logo a {
+    text-shadow: 0 0 7px rgb(251, 124, 120);
 }
 
 .cir-hov {
@@ -105,7 +115,7 @@ a:visited {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(251, 124, 120, 0.5);
+    background: rgba(6, 176, 163, 0.5);
     content: "";
     border-radius: 50%;
     width: 0;
@@ -162,11 +172,15 @@ figure {
 
 /*  FOOTER  */
 
+
 #footer {
     background: ghostwhite;
     font-family: 'Shadows Into Light Two';
     color: rgb(8, 17, 65);
     padding: 10px 20px;
+    margin: none;
+    width: 100%;
+
 }
 
 
