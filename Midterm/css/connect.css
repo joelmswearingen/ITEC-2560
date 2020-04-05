@@ -9,9 +9,10 @@ rgb(251, 124, 120)  --  salmon
 rgb(6, 176, 163)  --  turquoise
 rgb(188, 59, 35)  --  brick
 rgb(237, 225, 115)  --  yellow
-
 */
 
+/* Read second to main.css */ 
+/* Style background/form specific to connect page */
 body {
     background-image: url(../images/alex-avalos-dnUNjIUCg5c-unsplash.jpg);
     background-size: cover;
@@ -46,7 +47,8 @@ img {
     width: 250px;
 }
 
-input[type=text], input[type=password] {
+/* Style field inputs */
+input[type=text] {
     width: 350px;
     padding: 10px 10px 10px 40px;
     margin: 10px;
@@ -89,6 +91,19 @@ input[type=text]:focus {
     border: 5px solid rgb(6, 176, 163);
 }
 
+/* Style drop down */
+select {
+    background-color: ghostwhite;
+    border: 1px solid rgb(8, 17, 65);
+    font-family: 'Montserrat';
+    font-size: small;
+    color: rgb(8, 17, 65);
+    width: 400px;
+    height: 36px;
+    margin: 10px;
+}
+
+/* Style submit button */
 input[type=button] {
     background-color: rgb(8, 17, 65);
     border: 1px solid ghostwhite;
@@ -105,13 +120,3 @@ input[type=button]:hover {
     opacity: 1;
 }
 
-select {
-    background-color: ghostwhite;
-    border: 1px solid rgb(8, 17, 65);
-    font-family: 'Montserrat';
-    font-size: small;
-    color: rgb(8, 17, 65);
-    width: 400px;
-    height: 36px;
-    margin: 10px;
-}

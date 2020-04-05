@@ -13,7 +13,7 @@ rgb(237, 225, 115)  --  yellow
 
 */
 
-/*  BASIC STYLES  */
+/*  GENERAL STYLES - APPLIED TO ALL PAGES FIRST */
 
 body {
     background: ghostwhite;
@@ -22,7 +22,8 @@ body {
     padding: 0;
 }
 
-.content {
+
+.content { /* Sticky footer - need to wrap all content minus footer in div element with this class - height is fixed based on current footer content - must be updated when footer content changes*/
     min-height: calc(100vh - 43px);
 }
 
@@ -60,10 +61,10 @@ h2 {
 }
 
 h2.special-header {
-    text-shadow: 0 0 3px rgb(188, 59, 35);
+    text-shadow: 0 0 2px rgb(188, 59, 35);
 }
 
-.header-alt {
+.header-alt { /* class used to create space between top of page and nav/header */
     padding-top: 120px;
 }
 
@@ -85,7 +86,7 @@ a:visited {
     color: rgb(188, 59, 35);
 }
 
-/*  HEADER  */
+/*  NAVIGATION BAR STYLING  */
 
 #header {
     background-color: rgba(8, 17, 65, 0.8);
@@ -144,7 +145,6 @@ li {
 }
 
 /* 
-
 The circle hover has two issues to be worked out - removing for now
     1. when the li has a space it forces the link onto two lines
     2. when the circle is fully expanded it overlays the link and you can't click the link through the circle
@@ -204,7 +204,16 @@ figure {
     text-align: center;
     text-transform: uppercase;
     color: rgb(188, 59, 35);
-    width: 150px;
+    width: 200px;
+}
+
+.features figure p {
+    font-family: 'Ibarra Real Nova';
+    color: rgb(8, 17, 65);
+    text-transform: none;
+    width: 200px;
+    margin: auto;
+    padding: 0;
 }
 
 .features figure img {
@@ -218,7 +227,7 @@ figure {
     font-size: x-small;
 }
 
-/*  FOOTER  */
+/*  FOOTER STYLING */
 
 #footer {
     background: ghostwhite;
