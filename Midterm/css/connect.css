@@ -26,11 +26,15 @@ fieldset {
     text-align: center;
     background-image: linear-gradient(ghostwhite, rgba(8, 17, 65, .8));
     border: none;
-
+    padding: 15px;
+}
+legend {
+    padding: 0;
+    height: 144px;
 }
 
 img {
-    width: 200px;
+    width: 250px;
 }
 
 input[type=text], input[type=password] {
@@ -43,22 +47,37 @@ input[type=text], input[type=password] {
     background-color: ghostwhite;
 }
 
-input[type=text] {
+input[id=name] {
     background-image: url('../images/user.png');
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 8px;
 }
 
-input[type=password] {
-    background-image: url('../images/key.png');
+input[id=email] {
+    background-image: url('../images/mail.png');
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 8px;
 }
 
-input[type=text]:focus, input[type=password]:focus {
-    background-color: rgba(6, 176, 163, .3);
+input[id=company] {
+    background-image: url('../images/company.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 8px;
+}
+
+input[id=title] {
+    background-image: url('../images/medal.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 8px;
+}
+
+input[type=text]:focus {
+    background-color: rgba(6, 176, 163, .4);
+    border: 5px solid rgb(6, 176, 163);
 }
 
 input[type=submit] {
@@ -70,4 +89,20 @@ input[type=submit] {
     padding: 10px 15px 10px 15px;
     margin: 10px;
     cursor: pointer;
+    opacity: .8;
+}
+
+input[type=submit]:hover {
+    opacity: 1;
+}
+
+select {
+    background-color: ghostwhite;
+    border: 1px solid rgb(8, 17, 65);
+    font-family: 'Montserrat';
+    font-size: small;
+    color: rgb(8, 17, 65);
+    width: 400px;
+    height: 36px;
+    margin: 10px;
 }
