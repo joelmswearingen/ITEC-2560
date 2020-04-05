@@ -18,6 +18,11 @@ body {
     background-color: ghostwhite;
 }
 
+.alt-p {
+    color: ghostwhite;
+    padding: 25px;
+}
+
 fieldset {
     width: 400px;
     font-family: 'Gloria Hallelujah';
@@ -81,7 +86,7 @@ input[type=text]:focus {
     border: 5px solid rgb(6, 176, 163);
 }
 
-input[type=submit] {
+input[type=button] {
     background-color: rgb(8, 17, 65);
     border: 1px solid ghostwhite;
     font-family: 'Shadows Into Light Two';
@@ -93,7 +98,7 @@ input[type=submit] {
     opacity: .8;
 }
 
-input[type=submit]:hover {
+input[type=button]:hover {
     opacity: 1;
 }
 

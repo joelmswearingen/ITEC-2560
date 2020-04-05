@@ -42,7 +42,7 @@ submitForm.addEventListener('click', function() {
     }
 
     if (errors.length == 0) {
-        receiptConfirm.innerHTML = 'Thanks! Please check you email for a special welcome message!'
+        receiptConfirm.innerHTML = 'Thanks!</br>Please check your email for a special welcome message!'
         nameInput.value = ''
         emailInput.value = ''
         companyInput.value = ''
