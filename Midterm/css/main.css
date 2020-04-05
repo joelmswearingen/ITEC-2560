@@ -44,13 +44,23 @@ h1 {
     margin: 0;
 }
 
+ h1.special-header {
+    font-size: 50px;
+    text-shadow: 0 0 15px rgb(6, 176, 163);
+}
+
 h2 {
     font-family: 'Shadows Into Light Two';
     text-align: center;
-    color: rgb(188, 59, 35);
-    font-size: x-large;
+    font-weight: bolder;
+    color: rgb(8, 17, 65);
+    font-size: xx-large;
     padding: 20px;
     margin: 0;
+}
+
+h2.special-header {
+    text-shadow: 0 0 3px rgb(188, 59, 35);
 }
 
 .header-alt {
@@ -60,13 +70,14 @@ h2 {
 .main-logo {
     display: block;
     height: 125px;
+    padding: 25px;
     margin-left: auto;
     margin-right: auto;
 }
 
 a:link {
     text-decoration: none;
-    color: rgb(8, 17, 65);
+    color: rgb(6, 176, 163);
 }
 
 a:visited {
@@ -192,6 +203,7 @@ figure {
     margin: auto;
     text-align: center;
     text-transform: uppercase;
+    color: rgb(188, 59, 35);
     width: 150px;
 }
 

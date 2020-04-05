@@ -19,8 +19,11 @@ body {
 }
 
 .alt-p {
+    font-family: 'Shadows Into Light Two';
     color: ghostwhite;
+    font-size: x-large;
     padding: 25px;
+    text-shadow: 0 0 3px rgb(251, 124, 120);
 }
 
 fieldset {
