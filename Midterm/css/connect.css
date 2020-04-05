@@ -36,6 +36,7 @@ fieldset {
     background-image: linear-gradient(ghostwhite, rgba(8, 17, 65, .8));
     border: none;
     padding: 15px;
+    box-shadow: 0 10px 5px -5px rgba(251, 124, 120, .5);
 }
 
 legend {
