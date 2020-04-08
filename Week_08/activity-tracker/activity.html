@@ -102,7 +102,7 @@
                             <th>Complete?</th>
                         </tr>
                         <!-- TODO display one table row for each activityRecord  -->
-                        <tr v-for="record in activityRecords">
+                        <tr v-for="record in activityRecords" v-bind:class="'art-'+record.type">
                             <td>{{ record.when | shortDateFormat }}</td>  <!-- Added short date filter -->
                             <td>{{ record.howLong | decimalPlaces(2) }}</td>  <!-- Added decimal place filter -->
                             <td>{{ record.type }}</td>
@@ -210,6 +210,13 @@
                     this.activityRecords.sort(function (r1, r2) {
                         return r2.when.getTime() - r1.when.getTime()
                     })
+                    this.when = '';
+                    this.howLong = 1;
+                    this.type = 'sketching';
+                    this.digitalTraditional = 'traditional';
+                    this.projectStatus = false;
+                    this.recordComments = '';
+                    this.errors = [];
                 }
             }
           },
